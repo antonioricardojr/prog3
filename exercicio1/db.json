@@ -1,0 +1,80 @@
+	{
+		"titulo": "Título do Livro 1",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+	},
+		{
+		"titulo": "Título do Livro 2",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	},
+		{
+		"titulo": "Título do Livro 3",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	},
+		{
+		"titulo": "Título do Livro 4",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	},
+		{
+		"titulo": "Título do Livro 5",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	},
+		{
+		"titulo": "Título do Livro 6",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	},
+
+		{
+		"titulo": "Título do Livro 7",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	},
+		{
+		"titulo": "Título do Livro 8",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	},
+		{
+		"titulo": "Título do Livro 9",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	},
+		{
+		"titulo": "Título do Livro 10",
+		"autores": ["Autor 1", "Autor 2"],
+		"descricao": "Descrição sobre o livro.",
+		"url": "http://urldolivro",
+		"preco": 50.99
+
+	}

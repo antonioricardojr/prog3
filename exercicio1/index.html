@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício 1: Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="dados.js"></script>
+	<script src="script.js"></script>
+</head>
+<body ng-app="App">
+	<div ng-controller="livrosController">
+	
+			<ul ng-model="$scope.livro">
+				<li> {{ livro.titulo }} </li>
+				<li> {{ livro.autores }} </li>
+				<li> {{ livro.descricao }} </li>
+				<li> {{ livro.url }} </li>
+				<li> {{ livro.preco }} </li>
+			</ul>
+
+			<button ng-click="anterior()">Anterior </button>
+			<button ng-click="proximo()">Próximo </button>
+			<button ng-click="editar()">Editar</button>
+		</div>
+	</div>
+</body>
+</html>
