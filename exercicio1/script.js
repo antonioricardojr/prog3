@@ -26,9 +26,17 @@
 			$scope.livro = db[$scope.indice];
 		}
 
-		$scope.editar = function () {
+		$scope.update = function () {
 
+			var livro_editado = {
+				titulo: $('#titulo').val(),
+				autores: $('#autores').val(),
+				descricao: $('#descricao').val(),
+				url: $('#url').val(),
+				preco: $('#preco').val()
+			}
 
+			$scope.livros[$scope.indice] = livro_editado;
 		}
 
 		$scope.adicionar = function () {
