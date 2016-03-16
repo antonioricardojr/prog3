@@ -4,13 +4,21 @@
 
 	app.controller('livrosController', function ($scope){
 
+		$scope.is_add = true;
+
 		$scope.itensEditados = {};
 		
 		$scope.livros = db;
 		$scope.indice = 0;
 		$scope.livro = db[$scope.indice];
 
-		$scope.myInterval = 3000;
+		$scope.temp_livro = {
+				titulo: 'Digite um novo título',
+				autores: [''],
+				descricao: 'Digite uma descrição sobre o livro.',
+				url: '',
+				preco: 0,
+		};
 
 		$scope.proximo = function () {
 			if ( $scope.indice < db.length - 1){
@@ -19,7 +27,7 @@
 				$scope.indice = 0;
 			}
 			$scope.livro = db[$scope.indice];
-		}
+		};
 
 		$scope.anterior = function () {
 			if ( $scope.indice > 0){
@@ -28,25 +36,10 @@
 				$scope.indice = db.length - 1;
 			}
 			$scope.livro = db[$scope.indice];
-		}
+		};
+		
 
-		$scope.toggleEditing = function(livro){
-    		$scope.itensEditados[livro.id] = 
-    		!$scope.itensEditados[livro.id] || true;
-  		};
-
-		$scope.editar = function (livro){
-			$scope.livro = livro;
-			
-		}
-
-		$scope.update = function () {
-
-			// $scope.livros[$scope.indice] = $scope.livro;
-		}
-
-		$scope.adicionar = function () {
-
+		$scope.adicionar = function (){
 
 		}
 	});
