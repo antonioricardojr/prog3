@@ -6,7 +6,11 @@
 		
 		$scope.livros = db;
 		$scope.indice = 0;
-		$scope.livro = db[$scope.indice];
+		$scope.livro = $scope.livros[$scope.indice];
+
+		$scope.livroForm = null;
+		$scope.formLabelHeader = null;
+		$scope.formLabelButton = null;
 
 		$scope.proximo = function () {
 			if ( $scope.indice < db.length - 1){
@@ -25,10 +29,20 @@
 			}
 			$scope.livro = db[$scope.indice];
 		}
+		
+		$scope.edita = function () {
+
+			$scope.livroForm = $scope.livro;
+			$scope.formLabelHeader = "Editar Livro";
+			$scope.formLabelButton = "Editar";
+		}
 
 		$scope.novoLivro = function () {
 
-			var novo_livro = {
+			$scope.formLabelHeader = "Adicionar Novo Livro";
+			$scope.formLabelButton = "Adicionar";
+
+			var novoLivro = {
 				titulo: 'Digite o Título do Livro',
 				autores: ['Digite o autor do livro'],
 				descricao: 'Digite uma descrição sobre o livro',
@@ -36,7 +50,7 @@
 				preco: -1
 			}
 
-			$scope.livro = novo_livro;
+			$scope.livroForm = novoLivro;
 
 		}
 
@@ -48,14 +62,15 @@
 
 		$scope.adiciona = function () {
 
-			$scope.livros.push($scope.livro);
+			$scope.livros.push($scope.livroForm);
 			$scope.indice = $scope.livros.length - 1;
 			$scope.livro = $scope.livros[$scope.indice];
 		}
 
 		$scope.remove = function () {
 
-			var livro_removido = $scope.livros.splice($scope.index, 1);
+			$scope.livros.splice($scope.index, 1);
+
 			$scope.proximo();
 		}
 
