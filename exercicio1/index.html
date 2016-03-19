@@ -45,7 +45,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#" ng-click="adicionar()" data-toggle="modal" data-target="#myModal">Adicionar Livro</a>
+                        <a href="#" ng-click="novoLivro()" data-toggle="modal" data-target="#myModal">Adicionar Livro</a>
                     </li>
                 </ul>
             </div>
@@ -59,16 +59,18 @@
 		<header class="jumbotron" align="center">
         	
 				<h1> {{ livro.titulo }} </h1>
-				<img src="http://placehold.it/256x128" alt="">
+				
+				<img src="{{livro.url}}" alt="{{livro.titulo}}" height="256" width="200">
 				<p> {{ livro.autores.join(', ') }} </p>
 				<p> {{ livro.descricao }} </p>
-				<a href="{{ livro.url }}"> {{ livro.url }} </a>
+				
 				<p>R$ {{ livro.preco }} </p>
 			
 
 			<button class="btn btn-primary btn-large" ng-click="anterior()">Anterior </button>
 			<button class="btn btn-primary btn-large" ng-click="proximo()">Próximo </button>
 			<button type="button" class="btn" data-toggle="modal" data-target="#myModal">Editar</button>
+			<button type="button" class="btn" ng-click="remove()">Remover</button>
 			<!-- Modal -->
 			<div id="myModal" class="modal fade" role="dialog">
 			  <div class="modal-dialog">
@@ -77,7 +79,7 @@
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Editar Usuário</h4>
+			        <h4 class="modal-title">Livro</h4>
 			      </div>
 			      <div class="modal-body form-group container">
 			      	<form>
@@ -110,39 +112,12 @@
 
 
 			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-			        <button id="botao_confirma" type="submit" class="btn btn-default" data-dismiss="modal">Ok</button>
+			        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancela()">Cancelar</button>
+			        <button id="botao_confirma" type="submit" class="btn btn-default" data-dismiss="modal" ng-click="adiciona()">Adicionar</button>
 			      </div>
 			    </div>
 			  </div>
+	</header>
 
-
-
-		</div>
-
-		</header>
-
-        <hr>
-           <!-- Page Features -->
-<!--         <div class="row text-center">
-            <div ng-repeat="livro in livros">
-            	<div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>{{livro.titulo}}</h3>
-                        <p>{{livro.descricao}}</p>
-                        <p>R$ {{livro.preco}}</p>
-                        <a href="{{livro.url}}">{{livro.url}}</a>
-                        <p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="setButton(false); loadLivro($index)">Editar</button> 
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div> -->
-        <!-- /.row -->
-
-    </div>
 </body>
 </html>
